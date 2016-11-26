@@ -6,7 +6,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./data/seed:/docker-entrypoint-initdb.d
+      - ./seed:/var/data
+      - ./data:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=univ_password
       - MYSQL_DATABASE=University
